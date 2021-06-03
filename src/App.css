@@ -3,6 +3,9 @@
 html {
   min-height: 100vh;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 body {
@@ -14,7 +17,6 @@ body {
 header,
 footer {
   font-family: 'Lora', serif;
-  position: absolute;
   left: 0;
   width: 100%;
 }
@@ -22,9 +24,12 @@ footer {
 header {
   font-size: calc(10px + 2vmin);
   top: 0;
+  margin-bottom: 1em;
+  position: initial;
 }
 
 footer {
+  position: absolute;
   font-size: calc(6px + 1vmin);
   bottom: 0;
 }
