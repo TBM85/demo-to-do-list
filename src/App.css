@@ -11,7 +11,20 @@ body {
   font-family: "Handlee", cursive;
 }
 
-header {
+header,
+footer {
   font-family: 'Lora', serif;
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+header {
   font-size: calc(10px + 2vmin);
+  top: 0;
+}
+
+footer {
+  font-size: calc(6px + 1vmin);
+  bottom: 0;
 }
