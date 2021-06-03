@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import Button from "../UI/Button/Button";
 
 const Form = styled.form`
   display: grid;
 
-  & input,
-  & button {
+  & input {
     font-size: calc(16px + 1vmin);
   }
 
@@ -20,21 +20,23 @@ const AddForm = () => {
     setTask(event.target.value);
   };
 
-  const [isAdding, setIsAdding] = useState(false);
-  const startAddingHandler = () => {
-    setIsAdding(true);
-  };
-
-  const endAddingHandler = () => {
-    setIsAdding(false);
-  };
-
   const [isMouseOver, setIsMouseOver] = useState(false);
   const extendAddingHandler = () => {
     setIsMouseOver(true);
   };
 
   const contractAddingHandler = () => {
+    setIsMouseOver(false);
+  };
+
+  const [isAdding, setIsAdding] = useState(false);
+  const startAddingHandler = () => {
+    setIsAdding(true);
+    setIsMouseOver(true);
+  };
+
+  const endAddingHandler = () => {
+    setIsAdding(false);
     setIsMouseOver(false);
   };
 
@@ -52,20 +54,22 @@ const AddForm = () => {
     <div className="add-tasks">
       {!isAdding && (
         !isMouseOver ? (
-          <button
+          <Button
             type="button"
+            className="open-btn"
             onMouseOver={extendAddingHandler}
           >
             +
-          </button>
+          </Button>
         ) : (
-          <button
+          <Button
             type="button"
+            className="open-btn"
             onClick={startAddingHandler}
             onMouseOut={contractAddingHandler}
           >
             Add a new task
-          </button>
+          </Button>
         )
       )}
       {isAdding && (
@@ -76,10 +80,10 @@ const AddForm = () => {
             onChange={changeTaskHandler}
           />
           <div className="button-group">
-            <button type="submit">Add</button>
-            <button type="button" onClick={endAddingHandler}>
+            <Button type="submit">Add</Button>
+            <Button type="button" onClick={endAddingHandler}>
               Hide
-            </button>
+            </Button>
           </div>
         </Form>
       )}

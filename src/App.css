@@ -33,3 +33,10 @@ footer {
   font-size: calc(6px + 1vmin);
   bottom: 0;
 }
+
+.open-btn {
+  float: right;
+  position: absolute;
+  top: 4.5em;
+  right: 1em;
+}
