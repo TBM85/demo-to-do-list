@@ -11,7 +11,7 @@ body {
   font-family: "Handlee", cursive;
 }
 
-.App-header {
+header {
   font-family: 'Lora', serif;
   font-size: calc(10px + 2vmin);
 }
