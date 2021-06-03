@@ -7,10 +7,11 @@ const Form = styled.form`
 
   & input {
     font-size: calc(16px + 1vmin);
-  }
-
-  & input {
     padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+    border: 1px solid #c9c7c9;
+    color: #504f50;
+    width: calc(40vw + 40vmin);
   }
 `;
 
