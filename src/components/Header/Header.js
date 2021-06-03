@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 const H1 = styled.h1`
   & span {
-    -webkit-text-stroke-color: black;
     -webkit-text-stroke-width: 1px;
   }
   & span:nth-child(1) {
