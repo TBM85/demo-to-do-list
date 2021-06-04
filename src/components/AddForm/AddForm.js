@@ -4,6 +4,7 @@ import Button from "../UI/Button/Button";
 
 const Form = styled.form`
   display: grid;
+  margin-top: -1.5em;
 
   & input {
     font-size: calc(16px + 1vmin);
@@ -11,7 +12,6 @@ const Form = styled.form`
     border-radius: 0.25em;
     border: 1px solid #c9c7c9;
     color: #504f50;
-    width: calc(40vw + 40vmin);
   }
 `;
 
