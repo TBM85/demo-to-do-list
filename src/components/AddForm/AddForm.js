@@ -15,7 +15,7 @@ const Form = styled.form`
   }
 `;
 
-const AddForm = () => {
+const AddForm = (props) => {
   const [task, setTask] = useState("");
   const changeTaskHandler = (event) => {
     setTask(event.target.value);
@@ -45,10 +45,12 @@ const AddForm = () => {
     event.preventDefault();
 
     const taskData = {
-      task: task,
+      id: Math.random().toString(),
+      task: task
     };
 
-    console.log(taskData);
+    // Send the new tasks to the "App" component
+    props.onPassTask(taskData);
   };
 
   return (
