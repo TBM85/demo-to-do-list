@@ -40,6 +40,25 @@ footer {
   width: calc(40vw + 40vmin);
 }
 
+.no-tasks {
+  height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.no-tasks-icons {
+  display: grid;
+}
+
+img.check-icon {
+  width: 4em;
+  background: #d9dde0;
+  border-radius: 5em;
+  padding: calc(10% + 1vmax);
+  margin: 1em auto;
+}
+
 .open-btn {
   float: right;
   position: absolute;

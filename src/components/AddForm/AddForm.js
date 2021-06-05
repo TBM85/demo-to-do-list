@@ -52,6 +52,7 @@ const AddForm = (props) => {
     // If the input is empty, the task will not be added
     if (task.trim().length === 0) {
       setIsAdding(false);
+      setIsMouseOver(false);
       return;
     }
 
