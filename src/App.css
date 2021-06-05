@@ -45,3 +45,20 @@ footer {
   top: 4.5em;
   right: 1em;
 }
+
+.check-btn {
+  height: 2em;
+  margin-right: 1em !important;
+}
+
+.checked {
+  box-shadow: none !important;
+  background-image: url("assets/icons/check.svg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+}
+
+.line-through {
+  text-decoration: line-through;
+}

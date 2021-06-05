@@ -8,11 +8,14 @@ const Tasks = styled.ul`
   text-align: left;
   font-size: calc(12px + 2vmin);
   margin-top: 0.4em;
+  padding-left: 0;
 
   & li {
     border-bottom: 1px solid #c9c7c9;
     margin-bottom: 0.5em;
     padding: 0 0.25em;
+    display: flex;
+    align-items: center;
   }
 `;
 
