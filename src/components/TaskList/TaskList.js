@@ -13,7 +13,6 @@ const Tasks = styled.ul`
   & li {
     border-bottom: 1px solid #c9c7c9;
     margin-bottom: 0.5em;
-    padding: 0 0.25em;
     display: flex;
     align-items: center;
   }

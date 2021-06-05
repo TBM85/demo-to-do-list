@@ -4,7 +4,7 @@ import Button from "../UI/Button/Button";
 
 const Form = styled.form`
   display: grid;
-  margin-top: -1.5em;
+  margin-top: -1em;
 
   & input {
     font-size: calc(16px + 1vmin);
@@ -46,8 +46,14 @@ const AddForm = (props) => {
 
     const taskData = {
       id: Math.random().toString(),
-      task: task
+      task: task,
     };
+
+    // If the input is empty, the task will not be added
+    if (task.trim().length === 0) {
+      setIsAdding(false);
+      return;
+    }
 
     // Send the new tasks to the "App" component
     props.onPassTask(taskData);
@@ -55,8 +61,8 @@ const AddForm = (props) => {
 
   return (
     <div className="add-tasks">
-      {!isAdding && (
-        !isMouseOver ? (
+      {!isAdding &&
+        (!isMouseOver ? (
           <Button
             type="button"
             className="open-btn"
@@ -73,8 +79,7 @@ const AddForm = (props) => {
           >
             Add a new task
           </Button>
-        )
-      )}
+        ))}
       {isAdding && (
         <Form onSubmit={formSubmitHandler}>
           <input
