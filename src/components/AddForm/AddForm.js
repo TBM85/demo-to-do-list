@@ -20,7 +20,8 @@ const Form = styled.form`
   }
 
   & img {
-    min-width: 3em;
+    min-width: 2.5em;
+    padding: 0.5em 0;
     text-align: center;
     cursor: pointer;
   }
