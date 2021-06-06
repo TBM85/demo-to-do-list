@@ -25,13 +25,17 @@ function App() {
     })
   }
 
+  const updateTasks = (updatedTasks) => {
+    setTasks(updatedTasks);
+  }
+
   return (
     <div className="App">
       <Header />
         <div className="container">
           <AddForm onPassTask={addTaskHandler} />
           {tasks.length > 0 ? (
-            <TaskList tasks={tasks} />
+            <TaskList tasks={tasks} onUpdateTasks={updateTasks} />
           ) : (
             <div className="no-tasks">
               <div className="no-tasks-icons">

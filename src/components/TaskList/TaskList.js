@@ -16,13 +16,28 @@ const Tasks = styled.ul`
     display: flex;
     align-items: center;
   }
+
+  & li .task-item {
+    cursor: pointer;
+    width: 100%;
+  }
+
+  & li .task-item .expand-list {
+    justify-content: flex-end;
+    display: flex;
+  }
 `;
 
 const TaskList = (props) => {
+  const deleteTaskHandler = (taskId) => {
+    const updatedTasks = props.tasks.filter(task => task.id !== taskId);
+    props.onUpdateTasks(updatedTasks);
+  }
+
   return (
     <Tasks className="tasks">
       {props.tasks.map((task) => (
-        <TaskItem task={task} key={task.id}>
+        <TaskItem task={task} key={task.id} onDeleteTask={deleteTaskHandler}>
           {task.task}
         </TaskItem>
       ))}
