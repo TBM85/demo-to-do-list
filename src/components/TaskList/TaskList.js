@@ -22,9 +22,17 @@ const Tasks = styled.ul`
     width: 100%;
   }
 
-  & li .task-item .expand-list {
+  & li .expand-list {
     justify-content: flex-end;
     display: flex;
+  }
+
+  & li .task-input-content {
+    font-family: "Handlee", cursive;
+    font-size: calc(12px + 2vmin);
+    color: #504f50;
+    width: 100%;
+    margin: 0;
   }
 `;
 
