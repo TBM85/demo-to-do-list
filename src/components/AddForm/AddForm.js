@@ -39,6 +39,11 @@ const AddForm = (props) => {
   const [task, setTask] = useState("");
   const changeTaskHandler = (event) => {
     setTask(event.target.value);
+
+    // If there is text in the input, the "add" button is enabled
+    if (task.trim().length > 0) {
+      setDisable(false);
+    }
   };
 
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -61,29 +66,36 @@ const AddForm = (props) => {
     setIsMouseOver(false);
   };
 
+  const [disable, setDisable] = useState(true);
+
   const formSubmitHandler = (event) => {
     event.preventDefault();
+
+    setDisable(false);
 
     const taskData = {
       id: Math.random().toString(),
       task: task,
     };
 
-    // If the input is empty, the task will not be added
+    // If the input is empty, the "add" button is disabled and the task will not be added
     if (task.trim().length === 0) {
-      setIsAdding(false);
-      setIsMouseOver(false);
+      setDisable(true);
       return;
     }
 
     resetInputHandler();
 
+    setDisable(true);
+
     // Send the new tasks to the "App" component
     props.onPassTask(taskData);
   };
 
+  // Clear the value in the input form
   const resetInputHandler = () => {
     setTask("");
+    setDisable(true);
   }
 
   return (
@@ -115,13 +127,14 @@ const AddForm = (props) => {
               value={task}
               placeholder="Add a task..."
               onChange={changeTaskHandler}
+              autoFocus
             />
             <div className="clear-input" type="button" onClick={resetInputHandler}>
               <img src={cross} alt="cross icon" />
             </div>
           </div>
           <div className="button-group">
-            <Button type="submit" ariaLabel="Add Task">Add</Button>
+            <Button type="submit" ariaLabel="Add Task" className={disable ? "disable" : ""}>Add</Button>
             <Button type="button" ariaLabel="Hide Form" onClick={endAddingHandler}>
               Hide
             </Button>
