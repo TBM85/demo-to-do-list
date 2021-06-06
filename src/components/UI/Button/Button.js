@@ -22,6 +22,7 @@ const Button = (props) => {
   return (
     <Btn
       type={props.type}
+      aria-label={props.ariaLabel}
       className={props.className}
       onClick={props.onClick}
       onMouseOver={props.onMouseOver}

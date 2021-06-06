@@ -12,6 +12,7 @@ const TaskItem = (props) => {
     <li className={`task ${isChecked ? "line-through" : ""}`}>
       <Button
         type="button"
+        ariaLabel="Checkmark the task"
         className={`check-btn ${isChecked ? "checked" : ""}`}
         onClick={checkToggleHandler}
       ></Button>

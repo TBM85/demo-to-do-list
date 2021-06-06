@@ -66,6 +66,13 @@ img.check-icon {
   right: 1em;
 }
 
+.plus-btn {
+  background-image: url("assets/icons/plus.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2em;
+}
+
 .check-btn {
   margin-right: 1em !important;
 }
@@ -80,4 +87,5 @@ img.check-icon {
 
 .line-through {
   text-decoration: line-through;
+  color: #8b9498;
 }
