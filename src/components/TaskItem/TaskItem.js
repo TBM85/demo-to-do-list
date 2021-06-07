@@ -30,12 +30,20 @@ const TaskItem = (props) => {
 
   return (
     <li className="task">
-      <Button
-        type="button"
-        ariaLabel="Checkmark the task"
-        className={`check-btn btn ${isChecked ? "checked" : ""}`}
-        onClick={checkToggleHandler}
-      ></Button>
+      {isExpand ? (
+        <Button
+          type="button"
+          ariaLabel="Checkmark the task"
+          className="disable"
+        ></Button>
+      ) : (
+        <Button
+          type="button"
+          ariaLabel="Checkmark the task"
+          className={`check-btn btn ${isChecked ? "checked" : ""}`}
+          onClick={checkToggleHandler}
+        ></Button>
+      )}
       <div className="task-item">
         {!isEditMode ? (
           <div

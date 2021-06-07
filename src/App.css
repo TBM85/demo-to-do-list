@@ -85,7 +85,6 @@ img.check-icon {
 .check-btn:hover,
 .checked {
   background-image: url("assets/icons/check.svg");
-  /* background-size: cover; */
 }
 
 .checked {
