@@ -27,6 +27,10 @@ const Tasks = styled.ul`
     display: flex;
   }
 
+  & li .task-content {
+    margin-left: 0.5em;
+  }
+
   & li .task-input-content {
     font-family: "Handlee", cursive;
     font-size: calc(12px + 2vmin);

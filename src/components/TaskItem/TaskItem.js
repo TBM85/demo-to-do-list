@@ -10,7 +10,7 @@ const TaskItem = (props) => {
 
   const [isExpand, setIsExpand] = useState(false);
   const expandListHandler = () => {
-    setIsExpand(true);
+    setIsExpand(!isExpand);
   };
 
   const [isEditMode, setEditMode] = useState(false);
