@@ -33,7 +33,7 @@ const TaskItem = (props) => {
       <Button
         type="button"
         ariaLabel="Checkmark the task"
-        className={`check-btn ${isChecked ? "checked" : ""}`}
+        className={`check-btn btn ${isChecked ? "checked" : ""}`}
         onClick={checkToggleHandler}
       ></Button>
       <div className="task-item">
@@ -59,26 +59,30 @@ const TaskItem = (props) => {
                 <div className="buttons">
                   <Button
                     type="button"
-                    className="edit-btn"
+                    className="edit-btn btn"
                     onClick={editHandler}
                   />
                   <Button
                     type="button"
-                    className="delete-btn"
+                    className="delete-btn btn"
                     onClick={deleteHandler}
                   />
                 </div>
               ) : (
                 <Button
                   type="button"
-                  className="delete-btn"
+                  className="delete-btn btn"
                   onClick={deleteHandler}
                 />
               )
             ) : (
               <Button type="button">Save</Button>
             )}
-            <Button type="button" onClick={cancelHandler}>
+            <Button
+              type="button"
+              className="cancel-btn"
+              onClick={cancelHandler}
+            >
               Cancel
             </Button>
           </div>

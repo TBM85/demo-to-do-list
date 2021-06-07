@@ -68,11 +68,14 @@ img.check-icon {
   right: 1em;
 }
 
-.plus-btn {
-  background-image: url("assets/icons/plus.svg");
+.btn {
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 2em;
+  background-size: 1.5em;
+}
+
+.plus-btn {
+  background-image: url("assets/icons/plus.svg");
 }
 
 .check-btn {
@@ -82,9 +85,7 @@ img.check-icon {
 .check-btn:hover,
 .checked {
   background-image: url("assets/icons/check.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  /* background-size: cover; */
 }
 
 .checked {
@@ -112,14 +113,10 @@ img.check-icon {
 
 .edit-btn {
   background-image: url("assets/icons/edit.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1.5em;
+  width: 3em;
 }
 
 .delete-btn {
   background-image: url("assets/icons/trash.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 1.5em;
+  width: 3em;
 }

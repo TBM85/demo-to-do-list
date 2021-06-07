@@ -106,7 +106,7 @@ const AddForm = (props) => {
           <Button
             type="button"
             ariaLabel="Extend Button"
-            className="open-btn plus-btn"
+            className="open-btn plus-btn btn"
             onMouseOver={extendAddingHandler}
           />
         ) : (

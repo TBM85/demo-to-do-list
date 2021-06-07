@@ -34,6 +34,15 @@ const Tasks = styled.ul`
     width: 100%;
     margin: 0;
   }
+
+  @media (max-width: 575px) {
+    & li .task-item button {
+      padding: 0.25em !important;
+    }
+    & li .cancel-btn {
+      width: 4em !important;
+    }
+  }
 `;
 
 const TaskList = (props) => {
