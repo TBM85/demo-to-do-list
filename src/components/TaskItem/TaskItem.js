@@ -23,6 +23,18 @@ const TaskItem = (props) => {
     props.onDeleteTask(taskId);
   };
 
+  const [isNewValue, setIsNewValue] = useState("");
+  const updateValueHandler = (event) => {
+    setIsNewValue(event.target.value);
+  };
+
+  const [isSaveValue, setIsSaveValue] = useState(props.children);
+  const saveHandler = () => {
+    setIsSaveValue(isNewValue);
+    setEditMode(false);
+    setIsExpand(false);
+  };
+
   const cancelHandler = () => {
     setEditMode(false);
     setIsExpand(false);
@@ -34,7 +46,7 @@ const TaskItem = (props) => {
         <Button
           type="button"
           ariaLabel="Checkmark the task"
-          className="disable"
+          className={`disable ${isChecked ? "checked btn" : ""}`}
         ></Button>
       ) : (
         <Button
@@ -50,13 +62,14 @@ const TaskItem = (props) => {
             className={`task-content ${isChecked ? "line-through" : ""}`}
             onClick={expandListHandler}
           >
-            {props.children}
+            {isSaveValue}
           </div>
         ) : (
           <input
             type="text"
             className="task-input-content"
-            defaultValue={props.children}
+            defaultValue={isSaveValue}
+            onChange={updateValueHandler}
             autoFocus
           />
         )}
@@ -84,7 +97,9 @@ const TaskItem = (props) => {
                 />
               )
             ) : (
-              <Button type="button">Save</Button>
+              <Button type="button" onClick={saveHandler}>
+                Save
+              </Button>
             )}
             <Button
               type="button"
