@@ -16,7 +16,7 @@ const TaskItem = (props) => {
   const [isEditMode, setEditMode] = useState(false);
   const editHandler = () => {
     setEditMode(true);
-  }
+  };
 
   const deleteHandler = () => {
     const taskId = props.task.id;
@@ -39,35 +39,44 @@ const TaskItem = (props) => {
       <div className="task-item">
         {!isEditMode ? (
           <div
-          className={`task-content ${isChecked ? "line-through" : ""}`}
-          onClick={expandListHandler}
+            className={`task-content ${isChecked ? "line-through" : ""}`}
+            onClick={expandListHandler}
           >
             {props.children}
           </div>
         ) : (
-          <input type="text" className="task-input-content" defaultValue={props.children} autoFocus />
+          <input
+            type="text"
+            className="task-input-content"
+            defaultValue={props.children}
+            autoFocus
+          />
         )}
         {isExpand && (
           <div className="expand-list">
             {!isEditMode ? (
-              <div className="buttons">
-                <Button
-                  type="button"
-                  className="edit-btn"
-                  onClick={editHandler}
-                />
+              !isChecked ? (
+                <div className="buttons">
+                  <Button
+                    type="button"
+                    className="edit-btn"
+                    onClick={editHandler}
+                  />
+                  <Button
+                    type="button"
+                    className="delete-btn"
+                    onClick={deleteHandler}
+                  />
+                </div>
+              ) : (
                 <Button
                   type="button"
                   className="delete-btn"
                   onClick={deleteHandler}
                 />
-              </div>
+              )
             ) : (
-              <div className="buttons">
-                <Button type="button">
-                  Save
-                </Button>
-              </div>
+              <Button type="button">Save</Button>
             )}
             <Button type="button" onClick={cancelHandler}>
               Cancel
