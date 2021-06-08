@@ -80,11 +80,13 @@ const TaskItem = (props) => {
                 <div className="buttons">
                   <Button
                     type="button"
+                    ariaLabel="Edit the task"
                     className="edit-btn btn"
                     onClick={editHandler}
                   />
                   <Button
                     type="button"
+                    ariaLabel="Delete the task"
                     className="delete-btn btn"
                     onClick={deleteHandler}
                   />
@@ -92,17 +94,23 @@ const TaskItem = (props) => {
               ) : (
                 <Button
                   type="button"
+                  ariaLabel="Delete the task"
                   className="delete-btn btn"
                   onClick={deleteHandler}
                 />
               )
             ) : (
-              <Button type="button" onClick={saveHandler}>
+              <Button
+                type="button"
+                ariaLabel="Save changes"
+                onClick={saveHandler}
+              >
                 Save
               </Button>
             )}
             <Button
               type="button"
+              ariaLabel="Cancel changes"
               className="cancel-btn"
               onClick={cancelHandler}
             >

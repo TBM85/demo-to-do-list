@@ -32,6 +32,12 @@ header {
   display: flex;
 }
 
+h1 {
+  background: #000;
+  padding: 0 0.25em;
+  border-radius: 0.15em;
+}
+
 footer {
   position: absolute;
   font-size: calc(6px + 1vmin);
@@ -39,7 +45,7 @@ footer {
 }
 
 .container {
-  width: calc(40vw + 40vmin);
+  width: calc(35vw + 55vmin);
 }
 
 .no-tasks {
