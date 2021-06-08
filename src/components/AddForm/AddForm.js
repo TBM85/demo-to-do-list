@@ -69,6 +69,7 @@ const AddForm = (props) => {
 
   const [disable, setDisable] = useState(true);
 
+  // Add a new task
   const formSubmitHandler = (event) => {
     event.preventDefault();
 

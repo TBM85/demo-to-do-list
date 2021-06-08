@@ -50,8 +50,11 @@ const Tasks = styled.ul`
 `;
 
 const TaskList = (props) => {
+  // Delete a task
   const deleteTaskHandler = (taskId) => {
     const updatedTasks = props.tasks.filter(task => task.id !== taskId);
+
+    // Sends updated tasks to 'App' component
     props.onUpdateTasks(updatedTasks);
   }
 

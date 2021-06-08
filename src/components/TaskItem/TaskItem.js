@@ -23,11 +23,13 @@ const TaskItem = (props) => {
     props.onDeleteTask(taskId);
   };
 
+  // Change the value
   const [isNewValue, setIsNewValue] = useState("");
   const updateValueHandler = (event) => {
     setIsNewValue(event.target.value);
   };
 
+  // Save the value
   const [isSaveValue, setIsSaveValue] = useState(props.children);
   const saveHandler = () => {
     setIsSaveValue(isNewValue);
@@ -35,6 +37,7 @@ const TaskItem = (props) => {
     setIsExpand(false);
   };
 
+  // Cancel changes
   const cancelHandler = () => {
     setEditMode(false);
     setIsExpand(false);

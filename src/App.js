@@ -32,12 +32,14 @@ const dummy_tasks = [
 function App() {
   const [tasks, setTasks] = useState(dummy_tasks);
 
+  // Receive the new task and add it to the tasks array
   const addTaskHandler = (taskData) => {
     setTasks((prevTasks) => {
       return [taskData, ...prevTasks];
     })
   }
 
+  // Receive the updated tasks
   const updateTasks = (updatedTasks) => {
     setTasks(updatedTasks);
   }
