@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/demo-to-do-list/static/css/main.a0195106.chunk.css",
-    "main.js": "/demo-to-do-list/static/js/main.b876c917.chunk.js",
-    "main.js.map": "/demo-to-do-list/static/js/main.b876c917.chunk.js.map",
+    "main.css": "/demo-to-do-list/static/css/main.be5bc754.chunk.css",
+    "main.js": "/demo-to-do-list/static/js/main.33b6c0fe.chunk.js",
+    "main.js.map": "/demo-to-do-list/static/js/main.33b6c0fe.chunk.js.map",
     "runtime-main.js": "/demo-to-do-list/static/js/runtime-main.43027c98.js",
     "runtime-main.js.map": "/demo-to-do-list/static/js/runtime-main.43027c98.js.map",
     "static/js/2.01a34da9.chunk.js": "/demo-to-do-list/static/js/2.01a34da9.chunk.js",
@@ -10,7 +10,7 @@
     "static/js/3.1343a181.chunk.js": "/demo-to-do-list/static/js/3.1343a181.chunk.js",
     "static/js/3.1343a181.chunk.js.map": "/demo-to-do-list/static/js/3.1343a181.chunk.js.map",
     "index.html": "/demo-to-do-list/index.html",
-    "static/css/main.a0195106.chunk.css.map": "/demo-to-do-list/static/css/main.a0195106.chunk.css.map",
+    "static/css/main.be5bc754.chunk.css.map": "/demo-to-do-list/static/css/main.be5bc754.chunk.css.map",
     "static/js/2.01a34da9.chunk.js.LICENSE.txt": "/demo-to-do-list/static/js/2.01a34da9.chunk.js.LICENSE.txt",
     "static/media/App.css": "/demo-to-do-list/static/media/trash.862c8cbf.svg",
     "static/media/cross.9e0d39d1.svg": "/demo-to-do-list/static/media/cross.9e0d39d1.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.43027c98.js",
     "static/js/2.01a34da9.chunk.js",
-    "static/css/main.a0195106.chunk.css",
-    "static/js/main.b876c917.chunk.js"
+    "static/css/main.be5bc754.chunk.css",
+    "static/js/main.33b6c0fe.chunk.js"
   ]
 }
