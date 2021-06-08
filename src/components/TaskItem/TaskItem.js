@@ -5,7 +5,7 @@ import Button from "../UI/Button/Button";
 const TaskItem = (props) => {
   const [isChecked, setIsChecked] = useState(false);
   const checkToggleHandler = () => {
-    setIsChecked(true);
+    setIsChecked(!isChecked);
   };
 
   const [isExpand, setIsExpand] = useState(false);
